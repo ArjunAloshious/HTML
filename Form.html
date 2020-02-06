@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+::placeholder {
+   color:    red;
+}
+select {
+    width: 170px;
+}
+label {
+    color:   red;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Registration Form</h1>
+<form action="" method="POST" id="form1">
+  <table>
+    <tr>
+      <td align="right">User Id:</td>
+      <td align="left"><input type="text" size="35" name="user" placeholder="Required and must be of length 5 to 12"/></td>
+    </tr>
+    <tr>
+      <td align="right">Password:</td>
+      <td align="left"><input type="password" size="35" name="pass" placeholder="Required and must be of length 7 to 12"></td>
+    </tr>
+    <tr>
+      <td align="right">Name:</td>
+      <td align="left"><input type="text" size="35" name="name" placeholder="Required and alphabets only"/></td>
+    </tr>
+    <tr>
+      <td align="right">Address:</td>
+      <td align="left"><input type="text" size="35" name="addr" placeholder="Optional"/></td>
+    </tr>
+    <tr>
+      <td align="right">Country:</td>
+      <td align="left">
+<select name="country">
+<option value="" disabled selected>(Please select a country)</option>
+  <option value="ind">India</option>
+  <option value="aus">Australia</option>
+  <option value="can">Canada</option>
+  <option value="swe">Sweden</option>
+</select>
+<label for="country">Required.Must select a country.</label>
+      </td>
+    </tr>
+    </tr>
+    <tr>
+      <td align="right">ZIP Code:</td>
+      <td align="left"><input type="text" size="35" name="zip" placeholder="Required. Must be numeric only"/></td>
+    </tr>
+    <tr>
+      <td align="right">Email:</td>
+      <td align="left"><input type="text" size="35" name="email" placeholder="Required. Must be a valid email"/></td>
+    </tr>
+    <tr>
+      <td align="right">Sex:</td>
+      <td align="left">
+<input type="radio" name="sex1" value="Male"/>Male
+<input type="radio" name="sex2" value="Female"/>Female
+<label for="sex2">Required</label>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Language:</td>
+      <td align="left">
+<input type="checkbox" name="lang1" value="English"/>English
+<input type="checkbox" name="lang2" value="Non English"/>Non English
+<label for="lang2">Required</label>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">About:</td>
+      <td align="left"><textarea rows="6" cols="37" placeholder="Optional"></textarea></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+<button type="submit" form="form1" value="submit"><strong>Submit</strong></button>
+      </td>
+  </table>
+</form>
+</center>
+</body>
+</html>
