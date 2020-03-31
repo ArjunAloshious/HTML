@@ -1,0 +1,37 @@
+<html>
+<body>
+<script type="text/javascript">
+var a=[];
+function bubble(a,n)
+ {
+  var temp;
+  for(var i=0;i<n;i++)
+   {
+    for(var j=0;j<(n-1)-i;j++)
+     {
+      if(a[j]>a[j+1])
+       {
+        temp=a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
+       }
+     }
+   }
+  document.writeln("The Sorted List Using Bubble Sort is : ");
+  for(var i=0;i<n;i++)
+   {
+    document.writeln(a[i]+ " ");
+   }
+ 
+ }
+n=window.prompt("Enter the Number of Elements");
+n=parseInt(n);
+for(var i=0;i<n;i++)
+ {
+  a[i]=window.prompt("Enter the Element");
+  a[i]=parseInt(a[i]);
+ }
+bubble(a,n);
+</script>
+</body>
+</html>
