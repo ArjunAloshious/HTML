@@ -1,0 +1,4 @@
+<h1>HURRAY!</h1>
+<h2>We have successfully changed the content of this page!</h2>
+<h2>Reload this page to do this task again!!</h2>
+<h2>This was done with the help of AJAX and XML!</h2>
