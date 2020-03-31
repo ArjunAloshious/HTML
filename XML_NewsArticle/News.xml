@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="News.xsl"?>
+
+<news>
+	<today>
+		<website>The New York Times</website>
+		<headline>Restrictions Are Slowing Coronavirus Infections, New Data Suggest </headline>
+		<category>(International News)</category>
+		
+		<content><p>A database of daily fever readings shows that the numbers declined as people disappeared indoors. (Link to the complete news article is provided below.)</p>
+		</content>
+		<author>By Donald G. McNeil Jr.</author>
+		<tdate>Date: March 30, 2020</tdate>
+	</today>
+</news>
