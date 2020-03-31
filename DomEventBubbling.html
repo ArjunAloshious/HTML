@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+<title>Event Bubbling</title>
+</head>
+<body>
+<style>
+form {
+  background-color: lightgreen;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 40px;
+}
+div {
+  background-color: skyblue;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 400px;
+  height: 400px;
+  line-height: 50px;
+}
+p {
+  background-color: red;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 290px;
+  height: 290px;
+  line-height: 250px;
+  margin: 0;
+}
+</style>
+<form onclick="alert('Level 1')" >LEVEL 1
+  <div onclick="alert('Level 2')">LEVEL 2
+    <p onclick="alert('Level 3')">LEVEL 3</p>
+  </div>
+</form>
+</body>
