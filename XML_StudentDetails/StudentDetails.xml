@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"
+				 version="2.0"
+				 href="StudentDetails.xsl"?>
+				 
+<!DOCTYPE people
+[
+<!ELEMENT people (person+)>
+<!ELEMENT person (id,name,phone,email,dob)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+]>
+
+<people>
+	<person>
+		<id>100</id>
+		<name>Mark Ruffalo</name>
+		<phone>1234567890</phone>
+		<email>mrk123@gmail.com</email>
+		<dob>11-22-1967</dob>
+	</person>
+	<person>
+		<id>102</id>
+		<name>Chris Evans</name>
+		<phone>2345678901</phone>
+		<email>crevns123@gmail.com</email>
+		<dob>06-13-1981</dob>
+	</person>
+	<person>
+		<id>104</id>
+		<name>Robert Downey Jr.</name>
+		<phone>3456789012</phone>
+		<email>rdj@gmail.com</email>
+		<dob>04-04-1965</dob>
+	</person>
+	<person>
+		<id>106</id>
+		<name>Chris Hemsworth</name>
+		<phone>4567890123</phone>
+		<email>chrhems@gmail.com</email>
+		<dob>08-11-1983</dob>
+	</person>
+</people>
