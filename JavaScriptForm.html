@@ -1,0 +1,205 @@
+<html>
+<head>
+<title> REGISTRATION FORM </title>
+<script>
+function formvalidation()
+{
+var uid = document.registration.userid;
+var passid = document.registration.passid;
+var uname = document.registration.username;
+var ucountry = document.registration.country;
+var uzip = document.registration.zip;
+var uemail = document.registration.email;
+var umsex = document.registration.msex;
+var ufsex = document.registration.fsex;
+ if(userid_validation(uid,5,12))
+ {
+  if(pass_validation(passid,7,12))
+  {
+   if(allletter(uname))
+   {
+   if(countryselect(ucountry))
+   {
+   if(allnumeric(uzip))
+   {
+    if(ValidateEmail(uemail))
+    {
+     if(validsex(umsex,ufsex))
+     {
+     }
+    }
+   }
+  }
+  }
+ }
+ }
+return false;
+}
+function userid_validation(uid,mn,mx)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= mx || uid_len < mn)
+{
+alert("UserId should not be empty and it's length should be between "+mn+" to "+mx);
+uid.focus();
+return false;
+}
+return true;
+}
+function pass_validation(passid,mn,mx)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= mx || passid_len < mn)
+{
+alert("Password should not be empty and it's length should be between "+mn+" to "+mx);
+passid.focus();
+return false;
+}
+return true;
+}
+function allletter(uname)
+{
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Enter the name and it should be in alphabetic');
+uname.focus();
+return false;
+}
+}
+function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+function allnumeric(uzip)
+{
+var numbers = /^[0-9]+$/;
+if(uzip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('please select the Zip code');
+uzip.focus();
+return false;
+}
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("please enter a valid email address");
+uemail.focus();
+return false;
+}
+} function validsex(umsex,ufsex)
+{
+x=0;
+
+if(umsex.checked)
+{
+x++;
+} if(ufsex.checked)
+{
+x++;
+}
+if(x==0)
+{
+alert('Select Gender as male/female');
+umsex.focus();
+return false;
+}
+else
+{
+alert('Form Succesfully Submitted');
+window.location.reload()
+return true;
+}
+}
+
+</script>
+<style>
+
+::placeholder {
+  color: red;
+}
+select {
+    width: 170px;
+}
+label {
+    color:   red;
+}
+</style>
+</head>
+<body>
+<h1><center><strong> Registration Form </strong></center></h1>
+<form name="registration" action="/action_page.php" onsubmit="return formvalidation()" method="post">  
+<center>
+<table cellspacing="10">
+<tr>
+<td align="right">User ID:</td>
+<td align="left"><input type ="text" name="userid" placeholder="Required and must be of length 5 to 12" min="5" maxlength="12" size="35" ></td>
+</tr>
+<tr>
+<td align="right">Password:</td>
+<td align="left"><input type ="password" name="passid" placeholder="Required and must be of length 7 to 12" min="7" maxlength="12" size="35"  ></td>
+</tr>
+<tr>
+<td align="right">Name:</td>
+<td align="left"><input pattern="[A-Za-z]*" name="username" placeholder="Required and must be alphabets" size="35"></td>
+</tr>
+<tr>
+<td align="right">Address:</td>
+<td align="left"><input type="text" name="address" placeholder="optional" size="35"></td>
+</tr>
+<tr>
+<td align="right">Country:</td>
+<td align="left"><select type="text" name="country"><option selected="" value="Default" size="35">Please choose a country</option><option value="ind">India</option><option value="china">China</option><option value="pak">Pakistan</option></select></td>
+</tr>
+<p>
+<tr>
+<td align="right">Zip-code:</td>
+<td align="left"><input type="number" name="zip" placeholder="Required.Must be numeric only" size="35" ></td>
+</tr>
+<tr>
+<td align="right">Email:</td>
+<td align="left"><input type="email" name="email" placeholder="Required.Must be valid mail only" size="35"></td>
+</tr>
+<tr>
+<td align="right">Sex:</td>
+<td align="left"><input type="radio" name="msex" value="male" >Male<input type="radio" name="fsex" value="female" >Female<required></td>
+</tr>
+<tr>
+<td align="right">Language:</td>
+<td align="left"><input type="checkbox" checked >English<input type="checkbox">Non-English</td>
+</tr>
+<tr>
+<td align="right" valign="top">About:</td>
+<td align="left"><textarea name="about" rows="8" cols="36" placeholder="optional" ></textarea></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><input type="submit" value="Submit"></center></td></tr>
+</table>
+</center>
+</form>
+</body>
+</html>
