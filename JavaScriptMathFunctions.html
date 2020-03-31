@@ -1,0 +1,63 @@
+<html>
+<body>
+<script type="text/javascript">
+var a=[]
+var ns,m,k,avg;
+function sum(a,n)
+ {
+  var sum=0;
+  for(var i=0;i<n;i++)
+   {
+    sum+=a[i];
+   }
+  return sum;
+ }
+function max(a,n)
+ {
+  var max=0;
+  for(var i=0;i<n;i++)
+   {
+    if(max<a[i] || max<a[i+1])
+     {
+      if(a[i]>a[i+1])
+       max=a[i];
+      else
+       max=a[i+1];
+     }
+    }
+  return max;
+  }
+function min(a,n)
+ {
+  var min=a[0];
+  for(var i=0;i<n;i++)
+   {
+    if(min>a[i] || min>a[i+1])
+     {
+      if(a[i]<a[i+1])
+       min=a[i];
+      else
+       min=a[i+1];
+     }
+   }
+  return min;
+ }
+
+n=window.prompt("Enter the Size of the Array");
+n=parseInt(n);
+for(var i=0;i<n;i++)
+ {
+  a[i]=window.prompt("Enter Element" + (i+1));
+  a[i]=parseInt(a[i]);
+ }
+s=sum(a,n);
+m=max(a,n);
+k=min(a,n);
+avg=s/n;
+document.writeln("Array Element with the Maximum Value is " + m + "\n");
+document.writeln("Array Element with the Minimum Value is " + k + "\n");
+document.writeln("Sum of Elements in the Array is " + s + "\n ");
+document.writeln("Average of Elements in the Array is " + avg + "\n");
+</script>
+</body>
+</html>
