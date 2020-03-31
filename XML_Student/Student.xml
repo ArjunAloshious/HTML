@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Student.xsl"?>
+<student>
+	<st>
+		<usn>USN1704016</usn>
+		<name>John Olivander</name>
+		<cname>Rajagiri</cname>
+		<branch>IT</branch>
+		<yoj>2019</yoj>
+		<email>john12@gmail.com</email>
+	</st>
+	<st>
+		<usn>USN2905060</usn>
+		<name>Jacob Mathew</name>
+		<cname>Rajagiri</cname>
+		<branch>IT</branch>
+		<yoj>2018</yoj>
+		<email>jacob34@gmail.com</email>
+	</st>
+	<st>
+		<usn>USN8302287</usn>
+		<name>Julia Roberts</name>
+		<cname>Rajagiri</cname>
+		<branch>IT</branch>
+		<yoj>2017</yoj>
+		<email>julia56@gmail.com</email>
+	</st>
+</student>
