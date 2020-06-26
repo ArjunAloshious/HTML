@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Delidded Web Design</title>
+		<style>
+			body
+			{
+				font-family: "Times New Roman", Times, serif;
+			}
+			
+			.a
+			{
+				text-align: right;
+			}
+			
+			.b
+			{
+				font-weight: bold;
+				color: green;
+			}
+			
+			h1,p
+			{
+				padding: 0px 14px;
+			}
+			
+			.vl
+			{
+				border-left: 6px solid #008925;
+				height: 500px;
+			}
+			
+			.navbar
+			{
+				overflow: hidden;
+				background-color: #008000;
+			}
+			
+			.navbar a
+			{
+				float: left;
+				font-size: 18px;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			
+			.dropdown
+			{
+				float: left;
+				overflow: hidden;
+			}
+			
+			.dropdown .dropbtn
+			{
+				font-size: 18px;  
+				border: none;
+				outline: none;
+				color: white;
+				padding: 14px;
+				background-color: inherit;
+				font-family: inherit;
+				margin: 0;
+			}
+			
+			.navbar a:hover, .dropdown:hover .dropbtn
+			{
+				color: yellow;
+			}
+			
+			.dropdown-content
+			{
+				display: none;
+				position: absolute;
+				background-color: #008000;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+			
+			.dropdown-content a
+			{
+				float: none;
+				color: white;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+			}
+			
+			.dropdown-content a:hover
+			{
+				background-color: #7BD786;
+			}
+			
+			.dropdown:hover .dropdown-content
+			{
+				display: block;
+			}
+		</style>
+	</head>
+	
+	
+	<body>
+		<div class="vl">
+			<div class="navbar">
+				<a style = "padding: 4px 15px "><img src="delidded.png" alt="Delidded Logo"></a>
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<div class="dropdown">
+					<button class="dropbtn">Products<i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a href="#">Engineering</a>
+						<a href="#">Telecom</a>
+						<a href="#">Energy</a>
+						<a href="#">Finance</a>
+						<a href="#">Consultancy</a>
+					</div>
+				</div> 
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
+				<a href="#login"><div style = "float:right"><div class = "a">Login</div></div></a>
+			</div>
+			<h1>Delidded Web Design</h1>
+			<p>Welcome to <span class = "b">delidded.com</span></p>
+		</div>
+	</body>
+</html>
